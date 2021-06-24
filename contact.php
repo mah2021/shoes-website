@@ -198,23 +198,6 @@ if(isset($_POST['submit'])){
 
 
 
-<?php
-   include("include/db.php");
-    if(isset($_POST['submit'])){
-        $sender_name = $_POST['fullname'];
-        $sender_email = $_POST['email'];
-        $sender_password = $_POST['password'];
-        
-        $insert_message = "insert into users (fullname,email,password,date)
-        values('$sender_name','$sender_email',' $sender_password',NOW())";
-      
-        $run_message = mysqli_query($con,$insert_message);
-        if($run_message){
-            echo "<script>alert('Registration completed successfully')</script>";
-            echo "<script>window.open('Account.php','_self')</script>";
-        }
-       }
-    
-?>
+
 
 
